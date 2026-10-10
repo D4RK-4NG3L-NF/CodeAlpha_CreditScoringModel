@@ -1,48 +1,59 @@
+
 # Credit Scoring Model
 
-**CodeAlpha Machine Learning Internship — Project 1**
+## Overview
+This project was developed as part of my CodeAlpha Machine Learning Internship. It uses Logistic Regression to classify fictional customer records into two creditworthiness categories.
 
-## About the Project
-This beginner machine learning project demonstrates binary classification using sample customer financial data. It uses Logistic Regression to predict a customer's creditworthiness.
+## Features
+- Income
+- Debt
+- Payment history
+- Credit history duration
 
 ## Technologies Used
 - Python
 - Pandas
 - Scikit-learn
-- Logistic Regression
+- VS Code
+- Git and GitHub
 
-## Dataset Features
-- `income` — sample customer income
-- `debt` — sample customer debt
-- `payment_history` — illustrative payment-history indicator
-- `credit_history_years` — years of credit history
-- `creditworthy` — target label (1 or 0)
+## Dataset
+The dataset contains 30 fictional customer records and four input features. The target column, `creditworthy`, contains binary labels:
+- `1`: Creditworthy class
+- `0`: Not-creditworthy class
 
-## Project Files
-- `create_dataset.py` — creates and saves the sample dataset.
-- `credit_data.csv` — sample customer data.
-- `train_model.py` — loads the data, trains the model, evaluates training accuracy, and predicts a sample customer's class.
-- `.gitignore` — excludes files that should not be tracked, such as the local virtual environment.
+## Model
+Logistic Regression is trained using an 80/20 train-test split.
+
+- Training records: 24
+- Testing records: 6
+- Test accuracy: 83.33% on this small test split
 
 ## How to Run
-
 Install the required libraries:
 
-`pip install pandas scikit-learn`
+```bash
+pip install pandas scikit-learn
+```
 
-Run the scripts from the project directory:
+Create the dataset:
 
-`python create_dataset.py`
+```bash
+python create_dataset.py
+```
 
-`python train_model.py`
+Train and evaluate the model:
 
-## Current Results
-The model successfully trains and generates a prediction. The reported training accuracy was 100% on five sample rows.
-
-**Important:** This is training accuracy, not test accuracy. The dataset is too small to establish reliable performance on unseen customers.
+```bash
+python train_model.py
+```
 
 ## Limitations
-This is an educational prototype with illustrative data. It is not suitable for real credit decisions. A larger dataset, proper testing, and fairness and privacy checks would be required for real-world use.
+This is an educational project using a small, synthetic dataset. The test result is not a reliable estimate of real-world performance. This model must not be used to make actual lending or credit decisions.
 
-## Author
-AI Software Engineering Student
+## Learning Outcomes
+- Creating a dataset with Pandas
+- Preparing input features and target labels
+- Training a Logistic Regression model
+- Splitting data into training and testing sets
+- Evaluating predictions with accuracy, a confusion matrix, and a classification report
